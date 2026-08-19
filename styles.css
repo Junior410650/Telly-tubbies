@@ -230,3 +230,149 @@ body {font-family: "Lato", sans-serif;}
             font-size: 0.9rem;
             margin-top: 4rem;
         }
+
+/* Arcele css*/
+  .aboutcard stats {
+    background-color: #ffffff; /* White Base */
+    padding: 60px 40px;
+    max-width: 1100px;
+    margin: 40px auto;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: #000000; /* Black Core Text */
+  }
+
+  
+  .aboutcard stats.section-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #000000;
+    position: relative;
+    padding-bottom: 12px;
+  }
+  
+  
+  .aboutcard stats.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    height: 3px;
+    background-color: #1e3a8a; 
+  }
+
+  .aboutgrid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 0;
+    border-top: 1px solid #e5e5e5; 
+    margin-top: 30px;
+  }
+
+  
+  .aboutitem {
+    flex: 1;
+    padding: 40px 24px;
+    border-right: 1px solid #e5e5e5;
+    transition: all 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+    background-color: #ffffff;
+  }
+
+  .aboutitem:last-child {
+    border-right: none;
+  }
+
+  
+  .aboutitem:not(:nth-child(2)):hover {
+    background-color: #f8fafc; 
+    padding-left: 32px;
+  }
+
+  .aboutitem:nth-child(2) {
+    background-color: #0f172a; 
+    border-right: none;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    margin-top: -15px;
+    box-shadow: 0 20px 40px rgba(15, 23, 42, 0.15); 
+    z-index: 2;
+    border-radius: 8px;
+  }
+
+  
+  .aboutitem:nth-child(2):hover {
+    background-color: #1e293b; 
+    transform: translateY(-4px);
+  }
+
+  
+  .aboutnumber {
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 1;
+    letter-spacing: -2px;
+    margin-bottom: 12px;
+    transition: transform 0.3s ease;
+  }
+
+  
+  .aboutitem:nth-child(1) .aboutnumber {
+    color: #2563eb; 
+  }
+
+  .aboutitem:nth-child(2) .aboutnumber {
+    color: #dc2626; 
+  }
+
+  .aboutitem:nth-child(3) .aboutnumber {
+    color: #eab308; 
+  }
+
+  
+  .aboutitem:hover .aboutnumber {
+    transform: scale(1.03);
+  }
+
+
+  .aboutlabel {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-weight: 600;
+  }
+
+  
+  .aboutitem:not(:nth-child(2)) .aboutlabel {
+    color: #4b5563; 
+  }
+
+  
+  .aboutitem:nth-child(2) .aboutlabel {
+    color: #94a3b8; 
+  }
+/*Arc3ele end here   */
+
+
+/* Responsive Design by Arcele */
+  @media (max-width: 768px) {
+    .aboutgrid {
+      flex-direction: column;
+      border-top: none;
+    }
+    .aboutitem {
+      width: 100%;
+      border-right: none;
+      border-bottom: 1px solid #e5e5e5;
+      padding: 30px 0;
+    }
+    .aboutitem:nth-child(2) {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      padding: 40px 20px;
+    }
+  }
+  /*End Responsive Design by Arcele */
+  
