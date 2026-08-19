@@ -1,108 +1,437 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vistech About </title>
-
-
+<html>
+   <title>About us</title> 
+   <link rel="stylesheet" href="style.css">
 <body>
+<nav class="school-navbar">
 
-    <!-- Page Banner -->
-    <div class="page-banner">
-        <h1>About VISTECH</h1>
-        <p>Varsity Institute of Science and Technology (Pty) LTD</p>
+    <div class="nav-container">
+
+        <!-- Logo -->
+        <a href="#" class="school-logo">
+            <div class="logo-placeholder">LOGO</div>
+            <span>School Name</span>
+        </a>
+
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            ☰
+        </button>
+
+        <!-- Navigation -->
+        <ul class="nav-menu" id="navMenu">
+
+            <li>
+                <a href="#">Home</a>
+            </li>
+
+            <!-- Engineering -->
+            <li class="dropdown">
+                <a href="#">
+                    Engineering Studies
+                    <span class="dropdown-arrow">▾</span>
+                </a>
+
+                <ul class="dropdown-menu">
+
+                    <li><a href="#">Civil Engineering</a></li>
+                    <li><a href="#">Mechanical Engineering</a></li>
+                    <li><a href="#">Electrical Engineering</a></li>
+                    <li><a href="#">Heavy Duty</a></li>
+                    <li><a href="#">Electrical Light Duty</a></li>
+                    <li><a href="#">Chemical Engineering</a></li>
+
+                </ul>
+            </li>
+
+            <!-- Information Technology -->
+            <li>
+                <a href="#">Information Technology</a>
+            </li>
+
+            <!-- Management -->
+            <li class="dropdown">
+                <a href="#">
+                    Management & Humanities
+                    <span class="dropdown-arrow">▾</span>
+                </a>
+
+                <ul class="dropdown-menu">
+
+                    <li><a href="#">Business Management</a></li>
+                    <li><a href="#">Financial Management</a></li>
+                    <li><a href="#">Human Resources Management</a></li>
+                    <li><a href="#">Marketing Management</a></li>
+                    <li><a href="#">Public Management</a></li>
+                    <li><a href="#">Tourism Management</a></li>
+                    <li><a href="#">Hospitality & Catering Services</a></li>
+                    <li><a href="#">Medical Secretary</a></li>
+                    <li><a href="#">Educare</a></li>
+                    <li><a href="#">Advertising</a></li>
+
+                </ul>
+            </li>
+
+            <!-- Media -->
+            <li>
+                <a href="#">Media</a>
+            </li>
+
+            <!-- Other Faculties -->
+            <li>
+                <a href="#">Artisan Studies</a>
+            </li>
+
+            <li>
+                <a href="#">ICP Programmes</a>
+            </li>
+
+            <li>
+                <a href="#">Transport & Logistics</a>
+            </li>
+
+            <li>
+                <a href="#">Contact Us</a>
+            </li>
+
+        </ul>
+
     </div>
 
-    <!-- Main Content -->
-    <main class="container">
-        
-        <!-- Institutional Overview -->
-        <div class="about-overview">
+</nav>
+
+
+<!-- =========================
+     ABOUT THE SCHOOL
+========================= -->
+
+<section class="about-school">
+
+    <!-- Decorative background elements -->
+    <div class="about-decoration about-decoration-one"></div>
+    <div class="about-decoration about-decoration-two"></div>
+
+
+    <div class="about-container">
+
+        <!-- Section Heading -->
+        <div class="about-heading reveal">
+
+            <span class="section-label">ABOUT OUR INSTITUTION</span>
+
+            <h1>
+                Building Knowledge,
+                <span>Shaping Futures.</span>
+            </h1>
+
             <p>
-                <strong>Varsity Institute of Science and Technology (Pty) LTD (VISTECH)</strong> is a multicultural and dynamic Institution which is proudly South African. The phenomenal success story of the college is one that has surprised critics and won over sceptics.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                Suspendisse potenti. Integer vitae justo nec nulla
+                facilisis tincidunt.
             </p>
-            <p>
-                Since its establishment in 2015, and under the bold and visionary leadership of its Director of Studies (D.O.S) <strong>Dennis Nduka Allison</strong>, the institution has inspired the community by transforming and serving humanity through innovation and the collaborative pursuit of knowledge. We are a reputable, comprehensive, flexible, and accessible institution motivating a future generation as the African college shaping futures in the service of humanity.
-            </p>
+
         </div>
 
-        <!-- Vision & Mission -->
-        <div class="vm-grid">
-            <div class="vm-card">
+
+        <!-- Main About Content -->
+        <div class="about-main">
+
+            <!-- Image / Visual -->
+            <div class="about-image-wrapper reveal">
+
+                <div class="about-image">
+                    <!-- Replace this with the actual school image -->
+                    <img src="images/school.jpg" alt="School campus">
+
+                    <div class="image-overlay"></div>
+
+                    <div class="established-badge">
+                        <span>EST.</span>
+                        <strong>19XX</strong>
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- Text -->
+            <div class="about-content reveal">
+
+                <span class="content-label">OUR STORY</span>
+
+                <h2>
+                    A Tradition of
+                    <span>Excellence</span>
+                </h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Donec vel sapien vitae arcu tincidunt tincidunt.
+                    Pellentesque habitant morbi tristique senectus et netus
+                    et malesuada fames ac turpis egestas.
+                </p>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Integer consequat, neque sed tincidunt suscipit, lorem
+                    libero commodo augue, vitae posuere magna lacus vitae
+                    neque.
+                </p>
+
+                <a href="#" class="about-button">
+                    Discover Our Story
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             SCHOOL STATISTICS
+        ========================= -->
+
+        <div class="school-stats reveal">
+
+            <div class="stat-card">
+
+                <div class="stat-icon">01</div>
+
+                <div>
+                    <strong class="counter" data-target="19">0</strong>
+                    <span>Years</span>
+                </div>
+
+                <p>Of educational excellence</p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">02</div>
+
+                <div>
+                    <strong class="counter" data-target="20">0</strong>
+                    <span>+</span>
+                </div>
+
+                <p>Academic programmes</p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">03</div>
+
+                <div>
+                    <strong class="counter" data-target="5000">0</strong>
+                    <span>+</span>
+                </div>
+
+                <p>Students and graduates</p>
+
+            </div>
+
+
+            <div class="stat-card">
+
+                <div class="stat-icon">04</div>
+
+                <div>
+                    <strong class="counter" data-target="100">0</strong>
+                    <span>%</span>
+                </div>
+
+                <p>Commitment to excellence</p>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             HISTORY TIMELINE
+        ========================= -->
+
+        <div class="history-section reveal">
+
+            <div class="history-heading">
+
+                <span class="section-label">OUR JOURNEY</span>
+
+                <h2>
+                    Our History
+                </h2>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Follow our journey from our establishment to where we
+                    are today.
+                </p>
+
+            </div>
+
+
+            <div class="timeline">
+
+                <!-- Timeline Item -->
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        19XX
+                    </div>
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-content">
+
+                        <h3>The Beginning</h3>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Donec vitae lorem
+                            pellentesque, tincidunt magna sed,
+                            malesuada libero.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Timeline Item -->
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        20XX
+                    </div>
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-content">
+
+                        <h3>Growth & Development</h3>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Vestibulum ante ipsum
+                            primis in faucibus orci luctus et ultrices.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Timeline Item -->
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        20XX
+                    </div>
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-content">
+
+                        <h3>Expanding Our Programmes</h3>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Praesent consequat
+                            pellentesque turpis.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Timeline Item -->
+                <div class="timeline-item">
+
+                    <div class="timeline-year">
+                        TODAY
+                    </div>
+
+                    <div class="timeline-dot"></div>
+
+                    <div class="timeline-content">
+
+                        <h3>Looking Towards The Future</h3>
+
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur
+                            adipiscing elit. Aliquam erat volutpat.
+                            Integer posuere magna vitae augue.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =========================
+             MISSION / VISION / VALUES
+        ========================= -->
+
+        <div class="about-values reveal">
+
+            <div class="value-card">
+
+                <span class="value-number">01</span>
+
+                <h3>Our Mission</h3>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Integer posuere erat a ante venenatis dapibus posuere
+                    velit aliquet.
+                </p>
+
+            </div>
+
+
+            <div class="value-card featured">
+
+                <span class="value-number">02</span>
+
                 <h3>Our Vision</h3>
-                <p>To be South Africa's leading higher education institution, empowering students through science and technology, as well as highly skilled graduates that have the best chance of succeeding in the job market.</p>
-            </div>
-            <div class="vm-card">
-                <h3>Our Mission & Philosophy</h3>
-                <p>To provide an educational experience of the highest calibre with a strong focus on team commitment and student success. It's time to build a dream: “A World Class Institution.” We believe that we do not succeed until our students succeed.</p>
-            </div>
-        </div>
 
-        <!-- Leadership & Staff Section -->
-        <section>
-            <h2>Our Leadership & Staff</h2>
-            <div class="staff-grid">
-                <div class="staff-card">
-                    <img src="assets/imgs/image1.webp" alt=" MR Dennis Nduka Allison" class="staff-img">
-                    <div class="staff-info">
-                        <h3>Dennis Nduka Allison</h3>
-                        <p>Director of Studies (D.O.S)</p>
-                    </div>
-                </div>
-                <div class="staff-card">
-                    <img src="assets/imgs/image1.webp" alt="Dr. Lerato Mokoena" class="staff-img">
-                    <div class="staff-info">
-                        <h3>Dr. Lerato Mokoena</h3>
-                        <p>Head of Academic Affairs</p>
-                    </div>
-                </div>
-                <div class="staff-card">
-                    <img src="assets/imgs/image3.webp" alt="Nomusa Khumalo" class="staff-img">
-                    <div class="staff-info">
-                        <h3>Nomusa Khumalo</h3>
-                        <p>Dean of Science & Technology</p>
-                    </div>
-                </div>
-                <div class="staff-card">
-                    <img src="assets/imgs/image3.webp" alt="Kagiso Molefe" class="staff-img">
-                    <div class="staff-info">
-                        <h3>Kagiso Molefe</h3>
-                        <p>Student Success & Support</p>
-                    </div>
-                </div>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Curabitur blandit tempus porttitor.
+                </p>
+
             </div>
 
-  <!--Arcele-->
 
-    <div class="aboutcard stats">
-      <h2 class="section-title" style="margin-bottom: 10px;">OUR GLOBAL COMMUNITY & REACH</h2>
-      
-      <div class="aboutgrid">
-        <div class="aboutitem">
-          <div class="aboutnumber">15,000+</div>
-          <div class="aboutlabel">Alumni</div>
-        </div>
-        <div class="aboutitem">
-          <div class="aboutnumber">95%</div>
-          <div class="aboutlabel">Placement Rate</div>
-        </div>
-        <div class="aboutitem">
-          <div class="aboutnumber">50+</div>
-          <div class="aboutlabel">Programs</div>
-        </div>
-      </div>
+            <div class="value-card">
 
+                <span class="value-number">03</span>
+
+                <h3>Our Values</h3>
+
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    Donec ullamcorper nulla non metus auctor fringilla.
+                </p>
+
+            </div>
+
+    <script src="script.js"></script>
+        </div>
 
     </div>
-        </section>
 
-    </main>
-
-    <!-- Footer -->
-    <footer>
-        <p>&copy; 2026 Varsity Institute of Science and Technology (VISTECH). All rights reserved.</p>
-    </footer>
-
+</section>
 </body>
 </html>
