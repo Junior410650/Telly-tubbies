@@ -1,118 +1,211 @@
 /* =====================================================
- MOBILE NAVIGATION
+   MOBILE NAVIGATION
 ===================================================== */
 
-const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-const navMenu = document.getElementById("navMenu");
+const mobileMenuBtn =
+    document.getElementById("mobileMenuBtn");
+
+const navMenu =
+    document.getElementById("navMenu");
+
 
 if (mobileMenuBtn && navMenu) {
 
-    mobileMenuBtn.addEventListener("click", () => {
+    mobileMenuBtn.addEventListener(
+        "click",
+        () => {
 
-        navMenu.classList.toggle("active");
+            navMenu.classList.toggle("active");
 
-    });
+        }
+    );
 
 }
 
 
 /* =====================================================
-   SCROLL REVEAL
+   SCROLL REVEAL ANIMATION
 ===================================================== */
 
-const revealElements = document.querySelectorAll(".reveal");
+const revealElements =
+    document.querySelectorAll(".reveal");
 
-const revealObserver = new IntersectionObserver(
-    (entries, observer) => {
 
-        entries.forEach((entry) => {
+const revealObserver =
+    new IntersectionObserver(
 
-            if (entry.isIntersecting) {
+        (entries, observer) => {
 
-                entry.target.classList.add("active");
+            entries.forEach(
+                (entry) => {
 
-                observer.unobserve(entry.target);
+                    if (
+                        entry.isIntersecting
+                    ) {
 
-            }
+                        entry.target.classList.add(
+                            "active"
+                        );
 
-        });
+                        observer.unobserve(
+                            entry.target
+                        );
 
-    },
-    {
-        threshold: 0.15
+                    }
+
+                }
+            );
+
+        },
+
+        {
+            threshold: 0.15
+        }
+
+    );
+
+
+revealElements.forEach(
+    (element) => {
+
+        revealObserver.observe(
+            element
+        );
+
     }
 );
-
-
-revealElements.forEach((element) => {
-
-    revealObserver.observe(element);
-
-});
 
 
 /* =====================================================
-   NUMBER COUNTERS
+   STATISTICS COUNTER
 ===================================================== */
 
-const counters = document.querySelectorAll(".counter");
+const counters =
+    document.querySelectorAll(
+        ".counter"
+    );
 
-const counterObserver = new IntersectionObserver(
-    (entries, observer) => {
 
-        entries.forEach((entry) => {
+const counterObserver =
+    new IntersectionObserver(
 
-            if (!entry.isIntersecting) {
-                return;
-            }
+        (entries, observer) => {
 
-            const counter = entry.target;
+            entries.forEach(
+                (entry) => {
 
-            const target = Number(
-                counter.getAttribute("data-target")
-            );
+                    if (
+                        !entry.isIntersecting
+                    ) {
+                        return;
+                    }
 
-            let current = 0;
 
-            const duration = 1500;
+                    const counter =
+                        entry.target;
 
-            const increment = target / (duration / 16);
 
-            function updateCounter() {
+                    const target =
+                        Number(
+                            counter.dataset.target
+                        );
 
-                current += increment;
 
-                if (current >= target) {
+                    const duration =
+                        1600;
 
-                    counter.textContent =
-                        target.toLocaleString();
 
-                    return;
+                    const startTime =
+                        performance.now();
+
+
+                    function updateCounter(
+                        currentTime
+                    ) {
+
+                        const elapsed =
+                            currentTime -
+                            startTime;
+
+
+                        const progress =
+                            Math.min(
+                                elapsed /
+                                duration,
+                                1
+                            );
+
+
+                        /*
+                         * Ease-out effect.
+                         * The number starts quickly and
+                         * gradually slows down.
+                         */
+
+                        const easedProgress =
+                            1 -
+                            Math.pow(
+                                1 - progress,
+                                3
+                            );
+
+
+                        const currentValue =
+                            Math.floor(
+                                easedProgress *
+                                target
+                            );
+
+
+                        counter.textContent =
+                            currentValue.toLocaleString();
+
+
+                        if (
+                            progress < 1
+                        ) {
+
+                            requestAnimationFrame(
+                                updateCounter
+                            );
+
+                        } else {
+
+                            counter.textContent =
+                                target.toLocaleString();
+
+                        }
+
+                    }
+
+
+                    requestAnimationFrame(
+                        updateCounter
+                    );
+
+
+                    observer.unobserve(
+                        counter
+                    );
 
                 }
+            );
 
-                counter.textContent =
-                    Math.floor(current).toLocaleString();
+        },
 
-                requestAnimationFrame(updateCounter);
+        {
+            threshold: 0.5
+        }
 
-            }
+    );
 
-            updateCounter();
 
-            observer.unobserve(counter);
+counters.forEach(
+    (counter) => {
 
-        });
+        counterObserver.observe(
+            counter
+        );
 
-    },
-    {
-        threshold: 0.5
     }
 );
-
-
-counters.forEach((counter) => {
-
-    counterObserver.observe(counter);
-
-});
